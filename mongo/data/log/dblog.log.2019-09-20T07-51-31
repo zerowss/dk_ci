@@ -1,0 +1,20 @@
+2019-09-20T07:47:08.215+0000 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2019-09-20T07:47:08.218+0000 I  CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=1df0ec544cf0
+2019-09-20T07:47:08.219+0000 I  CONTROL  [initandlisten] db version v4.2.0
+2019-09-20T07:47:08.219+0000 I  CONTROL  [initandlisten] git version: a4b751dcf51dd249c5865812b390cfd1c0129c30
+2019-09-20T07:47:08.219+0000 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2019-09-20T07:47:08.220+0000 I  CONTROL  [initandlisten] allocator: tcmalloc
+2019-09-20T07:47:08.220+0000 I  CONTROL  [initandlisten] modules: none
+2019-09-20T07:47:08.221+0000 I  CONTROL  [initandlisten] build environment:
+2019-09-20T07:47:08.221+0000 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2019-09-20T07:47:08.222+0000 I  CONTROL  [initandlisten]     distarch: x86_64
+2019-09-20T07:47:08.222+0000 I  CONTROL  [initandlisten]     target_arch: x86_64
+2019-09-20T07:47:08.222+0000 I  CONTROL  [initandlisten] options: { net: { bindIp: "*" }, security: { authorization: "enabled" }, storage: { dbPath: "/data/db" }, systemLog: { destination: "file", path: "/data/log/dblog.log" } }
+2019-09-20T07:47:08.232+0000 I  STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2019-09-20T07:47:08.237+0000 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=487M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2019-09-20T07:47:12.069+0000 I  CONTROL  [signalProcessingThread] got signal 15 (Terminated), will terminate after current cmd ends
+2019-09-20T07:47:12.071+0000 I  NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2019-09-20T07:47:12.072+0000 I  NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2019-09-20T07:47:12.076+0000 I  -        [signalProcessingThread] Stopping further Flow Control ticket acquisitions.
+2019-09-20T07:47:12.078+0000 I  CONTROL  [signalProcessingThread] now exiting
+2019-09-20T07:47:12.080+0000 I  CONTROL  [signalProcessingThread] shutting down with code:0

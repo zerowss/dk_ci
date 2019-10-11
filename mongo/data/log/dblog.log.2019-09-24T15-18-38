@@ -1,0 +1,67 @@
+2019-09-24T15:16:03.541+0000 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2019-09-24T15:16:03.544+0000 I  CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=befd4a30ae23
+2019-09-24T15:16:03.545+0000 I  CONTROL  [initandlisten] db version v4.2.0
+2019-09-24T15:16:03.550+0000 I  CONTROL  [initandlisten] git version: a4b751dcf51dd249c5865812b390cfd1c0129c30
+2019-09-24T15:16:03.551+0000 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2019-09-24T15:16:03.552+0000 I  CONTROL  [initandlisten] allocator: tcmalloc
+2019-09-24T15:16:03.553+0000 I  CONTROL  [initandlisten] modules: none
+2019-09-24T15:16:03.554+0000 I  CONTROL  [initandlisten] build environment:
+2019-09-24T15:16:03.554+0000 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2019-09-24T15:16:03.556+0000 I  CONTROL  [initandlisten]     distarch: x86_64
+2019-09-24T15:16:03.557+0000 I  CONTROL  [initandlisten]     target_arch: x86_64
+2019-09-24T15:16:03.559+0000 I  CONTROL  [initandlisten] options: { net: { bindIp: "*" }, security: { authorization: "enabled" }, storage: { dbPath: "/data/db" }, systemLog: { destination: "file", path: "/data/log/dblog.log" } }
+2019-09-24T15:16:03.572+0000 W  STORAGE  [initandlisten] Detected unclean shutdown - /data/db/mongod.lock is not empty.
+2019-09-24T15:16:03.587+0000 I  STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2019-09-24T15:16:03.596+0000 W  STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2019-09-24T15:16:03.602+0000 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=487M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2019-09-24T15:16:22.856+0000 I  STORAGE  [initandlisten] WiredTiger message [1569338182:856952][1:0x7fc812314b00], txn-recover: Recovering log 25 through 26
+2019-09-24T15:16:24.188+0000 I  STORAGE  [initandlisten] WiredTiger message [1569338184:188244][1:0x7fc812314b00], txn-recover: Recovering log 26 through 26
+2019-09-24T15:16:25.361+0000 I  STORAGE  [initandlisten] WiredTiger message [1569338185:361261][1:0x7fc812314b00], txn-recover: Main recovery loop: starting at 25/3072 to 26/256
+2019-09-24T15:16:25.418+0000 I  STORAGE  [initandlisten] WiredTiger message [1569338185:418787][1:0x7fc812314b00], txn-recover: Recovering log 25 through 26
+2019-09-24T15:16:26.450+0000 I  STORAGE  [initandlisten] WiredTiger message [1569338186:450761][1:0x7fc812314b00], file:sizeStorer.wt, txn-recover: Recovering log 26 through 26
+2019-09-24T15:16:26.586+0000 I  STORAGE  [initandlisten] WiredTiger message [1569338186:586496][1:0x7fc812314b00], file:sizeStorer.wt, txn-recover: Set global recovery timestamp: (0,0)
+2019-09-24T15:16:26.667+0000 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2019-09-24T15:16:26.827+0000 I  STORAGE  [initandlisten] Timestamp monitor starting
+2019-09-24T15:16:26.886+0000 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2019-09-24T15:16:26.905+0000 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2019-09-24T15:16:26.906+0000 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2019-09-24T15:16:26.907+0000 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2019-09-24T15:16:26.915+0000 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2019-09-24T15:16:26.920+0000 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2019-09-24T15:16:26.926+0000 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2019-09-24T15:16:26.927+0000 I  NETWORK  [initandlisten] Listening on /tmp/mongodb-27017.sock
+2019-09-24T15:16:26.928+0000 I  NETWORK  [initandlisten] Listening on 0.0.0.0
+2019-09-24T15:16:26.929+0000 I  NETWORK  [initandlisten] waiting for connections on port 27017
+2019-09-24T15:16:26.929+0000 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2019-09-24T15:16:27.026+0000 I  FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2019-09-24T15:16:58.208+0000 I  NETWORK  [listener] connection accepted from 172.20.0.1:38532 #1 (1 connection now open)
+2019-09-24T15:16:58.210+0000 I  NETWORK  [conn1] received client metadata from 172.20.0.1:38532 conn1: { application: { name: "robo3t" }, driver: { name: "MongoDB Internal Client", version: "4.0.5-18-g7e327a9" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-09-24T15:16:58.217+0000 I  SHARDING [conn1] Marking collection admin.system.users as collection version: <unsharded>
+2019-09-24T15:16:58.245+0000 I  ACCESS   [conn1] Successfully authenticated as principal root on admin from client 172.20.0.1:38532
+2019-09-24T15:16:58.256+0000 I  NETWORK  [listener] connection accepted from 172.20.0.1:38536 #2 (2 connections now open)
+2019-09-24T15:16:58.258+0000 I  NETWORK  [conn2] received client metadata from 172.20.0.1:38536 conn2: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.5-18-g7e327a9" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-09-24T15:16:58.273+0000 I  ACCESS   [conn2] Successfully authenticated as principal root on admin from client 172.20.0.1:38536
+2019-09-24T15:17:25.208+0000 I  NETWORK  [listener] connection accepted from 172.20.0.1:38546 #3 (3 connections now open)
+2019-09-24T15:17:25.210+0000 I  NETWORK  [conn3] received client metadata from 172.20.0.1:38546 conn3: { application: { name: "robo3t" }, driver: { name: "MongoDB Internal Client", version: "4.0.5-18-g7e327a9" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-09-24T15:17:25.221+0000 I  ACCESS   [conn3] Successfully authenticated as principal root on admin from client 172.20.0.1:38546
+2019-09-24T15:18:26.645+0000 I  NETWORK  [listener] connection accepted from 172.20.0.1:38558 #4 (4 connections now open)
+2019-09-24T15:18:26.647+0000 I  NETWORK  [conn4] received client metadata from 172.20.0.1:38558 conn4: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.5-18-g7e327a9" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-09-24T15:18:26.697+0000 I  ACCESS   [conn4] Successfully authenticated as principal root on admin from client 172.20.0.1:38558
+2019-09-24T15:18:33.574+0000 I  CONTROL  [signalProcessingThread] got signal 15 (Terminated), will terminate after current cmd ends
+2019-09-24T15:18:33.577+0000 I  NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2019-09-24T15:18:33.577+0000 I  NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27017.sock
+2019-09-24T15:18:33.584+0000 I  -        [signalProcessingThread] Stopping further Flow Control ticket acquisitions.
+2019-09-24T15:18:33.604+0000 I  CONTROL  [signalProcessingThread] Shutting down free monitoring
+2019-09-24T15:18:33.607+0000 I  FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2019-09-24T15:18:33.620+0000 I  STORAGE  [signalProcessingThread] Deregistering all the collections
+2019-09-24T15:18:33.622+0000 I  STORAGE  [signalProcessingThread] Timestamp monitor shutting down
+2019-09-24T15:18:33.624+0000 I  STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2019-09-24T15:18:33.625+0000 I  STORAGE  [signalProcessingThread] Shutting down session sweeper thread
+2019-09-24T15:18:33.625+0000 I  STORAGE  [signalProcessingThread] Finished shutting down session sweeper thread
+2019-09-24T15:18:33.626+0000 I  STORAGE  [signalProcessingThread] Shutting down journal flusher thread
+2019-09-24T15:18:33.717+0000 I  STORAGE  [signalProcessingThread] Finished shutting down journal flusher thread
+2019-09-24T15:18:33.718+0000 I  STORAGE  [signalProcessingThread] Shutting down checkpoint thread
+2019-09-24T15:18:33.718+0000 I  STORAGE  [signalProcessingThread] Finished shutting down checkpoint thread
+2019-09-24T15:18:33.801+0000 I  STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2019-09-24T15:18:33.802+0000 I  CONTROL  [signalProcessingThread] now exiting
+2019-09-24T15:18:33.803+0000 I  CONTROL  [signalProcessingThread] shutting down with code:0

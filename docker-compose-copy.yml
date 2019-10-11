@@ -1,0 +1,44 @@
+version: "3.1"
+services:
+  app-backend:
+    container_name: app-backend
+    build: ./backend
+    depends_on:
+      - app-mongo
+    environment:
+      - NODE_ENV=development
+      - HOST=0.0.0.0
+      - PORT=7001
+    ports:
+      - "7001:7001"
+    working_dir: /root/backend
+    volumes:
+      - "./backend:/root/backend"
+    command: sh -c "npm config set registry https://registry.npm.taobao.org && npm install && npm run dev"
+  app-frontend:
+    container_name: app-frontend
+    build: ./frontend
+    environment:
+      - NODE_ENV=development
+      - HOST=0.0.0.0
+      - PORT=3000
+    ports:
+      - "3000:3000"
+    working_dir: /root/frontend
+    volumes:
+      - "./frontend:/root/frontend"
+    command: sh -c "npm config set registry https://registry.npm.taobao.org && npm install && npm run dev"
+
+  app-mongo:
+    image: mongo
+    container_name: app-mongo
+    restart: always
+    volumes:
+      - "./mongo/data/db:/data/db"
+      - "./mongo/data/log:/data/log"
+    ports:
+      - "27018:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 12345
+    command: --dbpath /data/db --logpath /data/log/dblog.log --auth

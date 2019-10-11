@@ -1,0 +1,55 @@
+2019-10-04T12:43:24.555+0000 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2019-10-04T12:43:24.560+0000 I  CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=369437c6b8dc
+2019-10-04T12:43:24.560+0000 I  CONTROL  [initandlisten] db version v4.2.0
+2019-10-04T12:43:24.561+0000 I  CONTROL  [initandlisten] git version: a4b751dcf51dd249c5865812b390cfd1c0129c30
+2019-10-04T12:43:24.562+0000 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+2019-10-04T12:43:24.562+0000 I  CONTROL  [initandlisten] allocator: tcmalloc
+2019-10-04T12:43:24.563+0000 I  CONTROL  [initandlisten] modules: none
+2019-10-04T12:43:24.564+0000 I  CONTROL  [initandlisten] build environment:
+2019-10-04T12:43:24.564+0000 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2019-10-04T12:43:24.565+0000 I  CONTROL  [initandlisten]     distarch: x86_64
+2019-10-04T12:43:24.566+0000 I  CONTROL  [initandlisten]     target_arch: x86_64
+2019-10-04T12:43:24.566+0000 I  CONTROL  [initandlisten] options: { net: { bindIp: "*" }, security: { authorization: "enabled" }, storage: { dbPath: "/data/db" }, systemLog: { destination: "file", path: "/data/log/dblog.log" } }
+2019-10-04T12:43:24.578+0000 I  STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2019-10-04T12:43:24.590+0000 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=487M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2019-10-04T12:43:39.725+0000 I  STORAGE  [initandlisten] WiredTiger message [1570193019:725366][1:0x7f4b65638b00], txn-recover: Recovering log 45 through 46
+2019-10-04T12:43:40.627+0000 I  STORAGE  [initandlisten] WiredTiger message [1570193020:627512][1:0x7f4b65638b00], txn-recover: Recovering log 46 through 46
+2019-10-04T12:43:41.408+0000 I  STORAGE  [initandlisten] WiredTiger message [1570193021:408654][1:0x7f4b65638b00], txn-recover: Main recovery loop: starting at 45/118016 to 46/256
+2019-10-04T12:43:42.486+0000 I  STORAGE  [initandlisten] WiredTiger message [1570193022:486678][1:0x7f4b65638b00], txn-recover: Recovering log 45 through 46
+2019-10-04T12:43:43.373+0000 I  STORAGE  [initandlisten] WiredTiger message [1570193023:373023][1:0x7f4b65638b00], txn-recover: Recovering log 46 through 46
+2019-10-04T12:43:43.646+0000 I  STORAGE  [initandlisten] WiredTiger message [1570193023:645999][1:0x7f4b65638b00], txn-recover: Set global recovery timestamp: (0,0)
+2019-10-04T12:43:43.720+0000 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2019-10-04T12:43:43.855+0000 I  STORAGE  [initandlisten] Timestamp monitor starting
+2019-10-04T12:43:44.057+0000 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2019-10-04T12:43:44.073+0000 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2019-10-04T12:43:44.075+0000 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2019-10-04T12:43:44.077+0000 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2019-10-04T12:43:44.089+0000 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2019-10-04T12:43:44.094+0000 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2019-10-04T12:43:44.105+0000 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+2019-10-04T12:43:44.106+0000 I  NETWORK  [initandlisten] Listening on /tmp/mongodb-27017.sock
+2019-10-04T12:43:44.108+0000 I  NETWORK  [initandlisten] Listening on 0.0.0.0
+2019-10-04T12:43:44.109+0000 I  NETWORK  [initandlisten] waiting for connections on port 27017
+2019-10-04T12:43:44.108+0000 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+2019-10-04T12:44:38.052+0000 I  NETWORK  [listener] connection accepted from 172.20.0.1:34442 #1 (1 connection now open)
+2019-10-04T12:44:38.054+0000 I  NETWORK  [conn1] received client metadata from 172.20.0.1:34442 conn1: { application: { name: "robo3t" }, driver: { name: "MongoDB Internal Client", version: "4.0.5-18-g7e327a9" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-10-04T12:44:38.360+0000 I  SHARDING [conn1] Marking collection admin.system.users as collection version: <unsharded>
+2019-10-04T12:44:38.375+0000 I  ACCESS   [conn1] Successfully authenticated as principal root on admin from client 172.20.0.1:34442
+2019-10-04T12:44:53.076+0000 I  NETWORK  [listener] connection accepted from 172.20.0.1:34444 #2 (2 connections now open)
+2019-10-04T12:44:53.086+0000 I  NETWORK  [conn2] received client metadata from 172.20.0.1:34444 conn2: { application: { name: "robo3t" }, driver: { name: "MongoDB Internal Client", version: "4.0.5-18-g7e327a9" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-10-04T12:44:53.099+0000 I  ACCESS   [conn2] Successfully authenticated as principal root on admin from client 172.20.0.1:34444
+2019-10-04T12:45:14.061+0000 I  NETWORK  [listener] connection accepted from 172.20.0.1:34446 #3 (3 connections now open)
+2019-10-04T12:45:14.062+0000 I  NETWORK  [conn3] received client metadata from 172.20.0.1:34446 conn3: { application: { name: "robo3t" }, driver: { name: "MongoDB Internal Client", version: "4.0.5-18-g7e327a9" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-10-04T12:45:14.070+0000 I  ACCESS   [conn3] Successfully authenticated as principal root on admin from client 172.20.0.1:34446
+2019-10-04T12:45:15.061+0000 I  NETWORK  [listener] connection accepted from 172.20.0.1:34448 #4 (4 connections now open)
+2019-10-04T12:45:15.062+0000 I  NETWORK  [conn4] received client metadata from 172.20.0.1:34448 conn4: { application: { name: "robo3t" }, driver: { name: "MongoDB Internal Client", version: "4.0.5-18-g7e327a9" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-10-04T12:45:15.069+0000 I  ACCESS   [conn4] Successfully authenticated as principal root on admin from client 172.20.0.1:34448
+2019-10-04T12:45:16.320+0000 I  NETWORK  [listener] connection accepted from 172.20.0.1:34450 #5 (5 connections now open)
+2019-10-04T12:45:16.323+0000 I  NETWORK  [listener] connection accepted from 172.20.0.1:34452 #6 (6 connections now open)
+2019-10-04T12:45:16.323+0000 I  NETWORK  [conn5] received client metadata from 172.20.0.1:34450 conn5: { application: { name: "robo3t" }, driver: { name: "MongoDB Internal Client", version: "4.0.5-18-g7e327a9" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-10-04T12:45:16.327+0000 I  NETWORK  [conn6] received client metadata from 172.20.0.1:34452 conn6: { application: { name: "robo3t" }, driver: { name: "MongoDB Internal Client", version: "4.0.5-18-g7e327a9" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-10-04T12:45:16.337+0000 I  NETWORK  [listener] connection accepted from 172.20.0.1:34454 #7 (7 connections now open)
+2019-10-04T12:45:16.342+0000 I  NETWORK  [conn7] received client metadata from 172.20.0.1:34454 conn7: { application: { name: "robo3t" }, driver: { name: "MongoDB Internal Client", version: "4.0.5-18-g7e327a9" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "18.7.0" } }
+2019-10-04T12:45:16.350+0000 I  ACCESS   [conn5] Successfully authenticated as principal root on admin from client 172.20.0.1:34450
+2019-10-04T12:45:16.360+0000 I  ACCESS   [conn6] Successfully authenticated as principal root on admin from client 172.20.0.1:34452
+2019-10-04T12:45:16.367+0000 I  ACCESS   [conn7] Successfully authenticated as principal root on admin from client 172.20.0.1:34454

@@ -1,9 +1,26 @@
-'use strict';
+'use strict'
 
 /** @type Egg.EggPlugin */
 module.exports = {
-  // had enabled by egg
-  // static: {
-  //   enable: true,
-  // }
-};
+    // had enabled by egg
+    // static: {
+    //   enable: true,
+    // }
+    routerPlus: {
+        enable: true,
+        package: 'egg-router-plus',
+    },
+    routerGroup: {
+        enable: true,
+        package: 'egg-router-group',
+    },
+    mongoose: {
+        enable: true,
+        package: 'egg-mongoose'
+    },
+    jwt: {
+        enable: true,
+        package: "egg-jwt"
+    }
+}
+

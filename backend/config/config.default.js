@@ -1,7 +1,6 @@
 /* eslint valid-jsdoc: "off" */
 
 'use strict';
-
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
@@ -23,8 +22,29 @@ module.exports = appInfo => {
     // myAppName: 'egg',
   };
 
+  const mongoose = {
+    client: {
+      url: 'mongodb://root:123456@app-mongo:27017/dk?authSource=admin',
+      options: {
+        useUnifiedTopology:true,
+        useNewUrlParser: true,
+        useFindAndModify: false
+      }
+    }
+  }
+  const jwt = {
+    secret: 'wangss87kk'
+  }
+
   return {
     ...config,
     ...userConfig,
+    mongoose,
+    jwt,
+    security:{
+      csrf:{
+        enable:false
+      }
+    }
   };
 };

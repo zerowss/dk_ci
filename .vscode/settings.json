@@ -1,8 +1,6 @@
 {
     "deploy": {
         "packages": [{
-            "name": "Version 1.0.0",
-            "description": "Package version 1.0.0",
             "files": [
                 "**/*",
             ],
@@ -17,11 +15,12 @@
         "targets": [{
             "type": "sftp",
             "name": "AliyunServer",
-            "dir": "/root/workspace/dk_ci",
+            "dir": "/workspace/dk_ci",
             "host": "47.104.165.117",
             "port": 22,
             "user": "root",
             "privateKey": "/Users/wss/.ssh/id_rsa"
         }]
-    }
+    },
+    "scm.defaultViewMode": "tree"
 }
