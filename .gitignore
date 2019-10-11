@@ -37,4 +37,4 @@ out
 gen
 
 node_modules
-mongo/data/
+/mongo/data
