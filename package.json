@@ -1,0 +1,23 @@
+{
+  "name": "dk_ci",
+  "version": "1.0.0",
+  "description": "docker",
+  "main": "webhock.js",
+  "dependencies": {
+    "github-webhook-handler": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zerowss/dk_ci.git"
+  },
+  "author": "wangsongsong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zerowss/dk_ci/issues"
+  },
+  "homepage": "https://github.com/zerowss/dk_ci#readme"
+}
