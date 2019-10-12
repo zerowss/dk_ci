@@ -40,13 +40,13 @@ services:
     restart: always
     volumes:
       - "./mongo/data/db:/var/lib/mongo"
-      - "./mongo/data/log:/var/log/mongodb"
+      - "./mongo/data/log:/var/log/mongodb/mongod.log"
     ports:
       - "27018:27017"
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: 12345
-    command: --dbpath /var/lib/mongo --logpath /var/log/mongodb --auth
+    command: --dbpath /var/lib/mongo --logpath /var/log/mongodb/mongod.log --auth
   
   app-nginx:
     restart: always
