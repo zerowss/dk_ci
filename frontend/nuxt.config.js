@@ -57,7 +57,9 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    proxy: true
+  },
   /*
    ** Build configuration
    */
@@ -82,8 +84,8 @@ export default {
     }
   },
   proxy: {
-    '/api/': {
-      target: 'http://app-backend:7001/', // 代理地址 查看docker容器的ip
+    '/api': {
+      target: 'http://app-backend:7001', // 代理地址 查看docker容器的ip
       changeOrigin: true,
       secure: true,
       pathRewrite: {

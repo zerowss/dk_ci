@@ -22,41 +22,39 @@ module.exports = appInfo => {
     // myAppName: 'egg',
   };
 
-  const mongoose = {
+  config.mongoose = {
     client: {
       url: 'mongodb://root:123456@app-mongo:27017/dk?authSource=admin',
       options: {
-        useUnifiedTopology:true,
+        useUnifiedTopology: true,
         useNewUrlParser: true,
         useFindAndModify: false
       }
     }
   }
-  const jwt = {
+  config.jwt = {
     secret: 'wangss87kk'
   }
 
-  const cors = {
-    origin: 'http://app-nginx:7777/', 
-    credentials: true, 
-    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH' 
+  config.cors = {
+    origin: 'http://app-frontend:3000',
+    credentials: true,
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+  }
+
+  config.security = {
+    csrf: {
+      headerName: 'x-csrf-token',
+      // ignoreJSON: true,
+      useSession: true,
+      cookieName: 'csrfToken',
+      sessionName: 'csrfToken',
+      enable: false
+    }
   }
 
   return {
     ...config,
-    ...userConfig,
-    mongoose,
-    jwt,
-    security:{
-      csrf: {
-        headerName: 'x-csrf-token',
-        // ignoreJSON: true,
-        useSession: true,
-        cookieName: 'csrfToken',
-        sessionName: 'csrfToken',
-        enable: false
-      }
-    },
-    cors
+    ...userConfig
   };
 };
