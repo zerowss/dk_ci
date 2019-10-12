@@ -39,14 +39,14 @@ services:
     container_name: app-mongo
     restart: always
     volumes:
-      - "./mongo/data/db:/data/db"
-      - "./mongo/data/log:/data/log"
+      - "./mongo/data/db:/var/lib/mongo"
+      - "./mongo/data/log:/var/log/mongodb"
     ports:
       - "27018:27017"
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: 12345
-    command: --dbpath /data/db --logpath /data/log/dblog.log --auth
+    command: --dbpath /var/lib/mongo --logpath /var/log/mongodb --auth
   
   app-nginx:
     restart: always
