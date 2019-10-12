@@ -53,6 +53,8 @@ class UserController extends BaseController {
      * @returns {Promise<void>}
      */
     async login() {
+        console.log('=====');
+        
         const { ctx, app } = this
         const { email, password } = ctx.request.body
         const user = await ctx.model.User.findOne({
@@ -61,6 +63,7 @@ class UserController extends BaseController {
         })
         if (user) {
             const { nickname } = user
+            ctx.rotateCsrfSecret();
             const token = app.jwt.sign(
                 {
                     nickname,

@@ -26,7 +26,7 @@ export const parseTime = (time, cFormat) => {
     s: date.getSeconds(),
     a: date.getDay()
   };
-  var time_str = format.replace(/{(y|m|d|h|i|s|a)+}/g, function(result, key) {
+  var time_str = format.replace(/{(y|m|d|h|i|s|a)+}/g, function (result, key) {
     var value = formatObj[key];
     if (key === "a")
       return ["一", "二", "三", "四", "五", "六", "日"][value - 1];
@@ -37,3 +37,12 @@ export const parseTime = (time, cFormat) => {
   });
   return time_str;
 };
+export const getCookie = (name) => {
+  let arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)")
+  if (arr = document.cookie.match(reg)) {
+    console.log(arr)
+    return arr[2]
+  } else {
+    return null
+  }
+}

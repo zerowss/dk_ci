@@ -36,15 +36,27 @@ module.exports = appInfo => {
     secret: 'wangss87kk'
   }
 
+  const cors = {
+    origin: 'http://app-nginx:7777/', 
+    credentials: true, 
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH' 
+  }
+
   return {
     ...config,
     ...userConfig,
     mongoose,
     jwt,
     security:{
-      csrf:{
-        enable:false
+      csrf: {
+        headerName: 'x-csrf-token',
+        // ignoreJSON: true,
+        useSession: true,
+        cookieName: 'csrfToken',
+        sessionName: 'csrfToken',
+        enable: false
       }
-    }
+    },
+    cors
   };
 };

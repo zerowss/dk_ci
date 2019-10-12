@@ -6,7 +6,7 @@ services:
     depends_on:
       - app-mongo
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
       - HOST=0.0.0.0
       - PORT=7001
     ports:
@@ -14,13 +14,13 @@ services:
     working_dir: /root/backend
     volumes:
       - "./backend:/root/backend"
-    command: sh -c "npm run dev"
+    command: sh -c "npm run start"
 
   app-frontend:
     container_name: app-frontend
     build: ./frontend
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
       - HOST=0.0.0.0
       - PORT=3000
     ports:
@@ -32,7 +32,7 @@ services:
     working_dir: /root/frontend
     volumes:
       - "./frontend:/root/frontend"
-    command: sh -c "npm run dev"
+    command: sh -c "npm run start"
 
   app-mongo:
     image: mongo
@@ -47,3 +47,15 @@ services:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: 12345
     command: --dbpath /data/db --logpath /data/log/dblog.log --auth
+  
+  app-nginx:
+    restart: always
+    image: nginx
+    container_name: app-nginx
+    depends_on:
+      - app-backend
+      - app-frontend
+    ports:
+      - "7777:80"
+    volumes:
+      - "./nginx/conf.d:/etc/nginx/conf.d"

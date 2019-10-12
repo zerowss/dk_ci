@@ -2,6 +2,7 @@ import Vue from 'vue'
 import axios from 'axios'
 import { storage } from "~/untils/storage";
 import { TOKEN_KEY } from "~/untils/config";
+import { getCookie } from "~/untils/tools";
 const service = axios.create({
   timeout: 5000,
   baseURL: '/api'
