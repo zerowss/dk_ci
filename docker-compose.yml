@@ -38,8 +38,8 @@ services:
       - NODE_ENV=production
       - HOST=0.0.0.0
       - PORT=27017
-      - MONGO_INITDB_ROOT_USERNAME: root
-      - MONGO_INITDB_ROOT_PASSWORD: 123456
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123456
     volumes:
       - "./mongo/data/db:/data/db"
       - "./mongo/data/log:/data/log"
