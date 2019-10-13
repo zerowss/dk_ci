@@ -44,6 +44,7 @@ services:
     ports:
       - "27018:27017"
     environment:
+      INSTALL_MONGO_SHELL: mongo.sh
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: 12345
     # command: --dbpath /data/db --logappend /data/log/dblog.log --auth
