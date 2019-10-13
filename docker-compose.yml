@@ -38,14 +38,16 @@ services:
       - NODE_ENV=production
       - HOST=0.0.0.0
       - PORT=27017
+      - MONGO_INITDB_ROOT_USERNAME: root
+      - MONGO_INITDB_ROOT_PASSWORD: 123456
     volumes:
       - "./mongo/data/db:/data/db"
       - "./mongo/data/log:/data/log"
     ports:
       - "27018:27017"
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: wsskk123456
+    # environment:
+      # MONGO_INITDB_ROOT_USERNAME: root
+      # MONGO_INITDB_ROOT_PASSWORD: 123456
     # command: --dbpath /data/db --logappend /data/log/dblog.log --auth
   
   app-nginx:
