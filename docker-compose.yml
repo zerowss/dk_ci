@@ -9,8 +9,6 @@ services:
       - NODE_ENV=production
       - HOST=0.0.0.0
       - PORT=7001
-    # ports:
-    #   - "7001:7001"
     working_dir: /root/backend
     volumes:
       - "./backend:/root/backend"
@@ -23,8 +21,6 @@ services:
       - NODE_ENV=production
       - HOST=0.0.0.0
       - PORT=3000
-    # ports:
-    #   - "3000:3000"
     links:
       - app-backend 
     depends_on:
@@ -38,15 +34,18 @@ services:
     image: mongo
     container_name: app-mongo
     restart: always
+    environment:
+      - NODE_ENV=production
+      - HOST=0.0.0.0
+      - PORT=27017
     volumes:
       - "./mongo/data/db:/data/db"
       - "./mongo/data/log:/data/log"
     ports:
       - "27018:27017"
-    environment:
-      INSTALL_MONGO_SHELL: mongo.sh
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: 12345
+    # environment:
+      # MONGO_INITDB_ROOT_USERNAME: root
+      # MONGO_INITDB_ROOT_PASSWORD: 12345
     # command: --dbpath /data/db --logappend /data/log/dblog.log --auth
   
   app-nginx:
