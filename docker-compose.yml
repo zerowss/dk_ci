@@ -46,7 +46,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: 12345
-    command: --dbpath /data/db --logpath --logappend /data/log/dblog.log --auth
+    command: --dbpath /data/db --logpath /data/log --auth
   
   app-nginx:
     restart: always
