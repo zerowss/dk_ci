@@ -43,9 +43,9 @@ services:
       - "./mongo/data/log:/data/log"
     ports:
       - "27018:27017"
-    # environment:
-      # MONGO_INITDB_ROOT_USERNAME: root
-      # MONGO_INITDB_ROOT_PASSWORD: 12345
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: wsskk123456
     # command: --dbpath /data/db --logappend /data/log/dblog.log --auth
   
   app-nginx:
