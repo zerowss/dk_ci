@@ -34,10 +34,10 @@ services:
     image: mongo
     container_name: app-mongo
     restart: always
-    # environment:
-    #   - NODE_ENV=production
-    #   - HOST=0.0.0.0
-    #   - PORT=27017
+    environment:
+      - NODE_ENV=production
+      - HOST=0.0.0.0
+      - PORT=27017
     volumes:
       - "./mongo/data/db:/data/db"
       - "./mongo/data/log:/data/log"
