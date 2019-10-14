@@ -34,10 +34,10 @@ services:
     image: mongo
     container_name: app-mongo
     restart: always
-    environment:
-      - NODE_ENV=production
-      - HOST=0.0.0.0
-      - PORT=27017
+    # environment:
+    #   - NODE_ENV=production
+    #   - HOST=0.0.0.0
+    #   - PORT=27017
     volumes:
       - "./mongo/data/db:/data/db"
       - "./mongo/data/log:/data/log"
@@ -45,7 +45,7 @@ services:
       - "27018:27017"
     # environment:
       # MONGO_INITDB_ROOT_USERNAME: root
-      # MONGO_INITDB_ROOT_PASSWORD: 123456
+      # MONGO_INITDB_ROOT_PASSWORD: 12345
     # command: --dbpath /data/db --logappend /data/log/dblog.log --auth
   
   app-nginx:
@@ -63,3 +63,4 @@ services:
     volumes:
       - "./nginx/conf.d:/etc/nginx/conf.d"
       - "./nginx/log:/var/log/nginx"
+
